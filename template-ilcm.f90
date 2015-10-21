@@ -34,10 +34,17 @@
 !
 !>     @version This is svn version: $LastChangedRevision$
 !
+!      DESCRIPTION
 !>     Here add the long_description of the module ...
 !!      more blablas ...
 !!      more blablas ...
+!>      Compute formula: \f$ \frac{d\lambda}{dt} , \frac{d\phi}{dt},  \frac{dz}{dt} \f$
+!!
+!!      REFERENCES: papers or other documents to be cited...(including link when possible)    
 !
+!       REVISION HISTORY:
+!       YYYY-MM-DD - Initial Version
+!       TODO_YYYY-MM-DD - TODO_describe_appropriate_changes to be done or discussed - TODO_name
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
 
       module Foo_mod
@@ -51,11 +58,16 @@
        public :: someFunction
        public :: Foo
 
+       ! type foo contains data structure for foo data:
+       ! foo1  : definition of variable foo1 [units]
+       ! foo2  : definition of variable foo2 [units]
        type Foo
 
        end type Foo
+       ! 
 
-      ! NOTE_avoid_public_variables_if_possible
+       ! NOTE_avoid_public_variables_if_possible
+       ! IF NOT POSSIBLE... don't forget to include definition and units!
 
       contains
 
@@ -69,30 +81,38 @@
 !>     Here add the long_description of the module ...
 !!      more blablas ...
 !!      more blablas ...
+!>      Compute formula: \f$ \frac{d\lambda}{dt} , \frac{d\phi}{dt},  \frac{dz}{dt} \f$
 !
+!!      REFERENCES: papers or other documents to be cited...(including link when possible)    
+!
+!       REVISION HISTORY:
+!       YYYY-MM-DD - Initial Version
+!       TODO_YYYY-MM-DD - TODO_describe_appropriate_changes to be done or discussed - TODO_name
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
 
       function someFunction(inParam, outParam, inOutParam) result(returnValue)
 
-       use AnotherModule_mod, only: some_variable
-       use AnotherModule_mod, only: some_otherfunction
+       use AnotherModule_mod, only: some_variable          ! brief_description [units]
+       use AnotherModule_mod, only: some_otherfunction     ! brief_description [units]
 
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
 ! tfa   By reference variables ...
-!>    @param[in]  inParam  The Beaufitul Parameter that does all the input !!
-!>    @param[out] outParam The Beaufitul Parameter that does all the output!!
+!>    @param[in]  inParam  The Beaufitul Parameter that does all the input [units] !!
+!>    @param[out] outParam The Beaufitul Parameter that does all the output [units]!!
+!>    @return returnValue
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
 
-       real, intent(in)    :: inParam
-       real, intent(inout) :: inOutParam
+       real, intent(in)    :: inParam     
+       real, intent(inout) :: inOutParam  
        real, intent(out)   :: outParam
 
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
 ! tfa  Local variables ...
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
 
-       real                :: returnValue
-       real                :: someVariable
+       real                :: returnValue   !> @var Variable description [units]
+       real                :: someVariable  !> @var Variable veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery
+                                            ! veryveryveryveryveryveryveryveryveryverylong_description [units]
 
 
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
@@ -104,11 +124,11 @@
       end function someFunction
 
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
-!      End of the function here
+!      End of the function someFunction here
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
 
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
-!      End of the module here
+!      End of the module Foo_mod here
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
 
 end module Foo_mod
