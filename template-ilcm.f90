@@ -74,7 +74,7 @@
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
 !      ROUTINE: [Routine or Function Name Here]
 !
-!>     @brief This subroutine / function is addind a wonderful knew unused functionality
+!>     @brief This subroutine / function is adding a wonderful knew unused functionality
 !
 !      DESCRIPTION:
 !
@@ -112,7 +112,7 @@
 
        real                :: returnValue   !> @var Variable description [units]
        real                :: someVariable  !> @var Variable veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery
-                                            ! veryveryveryveryveryveryveryveryveryverylong_description [units]
+                                            ! veryveryveryveryveryveryveryveryveryvery long_description [units]
 
 
 !-----|--1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----0----+----1----+----2----+----3-|
